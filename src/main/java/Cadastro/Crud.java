@@ -19,6 +19,7 @@ public class Crud {
         cod=sc.nextInt();
       
       switch(cod){
+          //Adicionar pessoa
           case 1-> { 
               PessoaDao pd = new PessoaDao();
               int id;
@@ -39,6 +40,7 @@ public class Crud {
               System.out.println("Registro criado"+ pd.ListarPessoas());
               sc.close();
             }
+            //Editar Pessoa
           case 2->{
               String nome;
               String email;
@@ -61,6 +63,7 @@ public class Crud {
               pd.consultarPessoaIndividual(id);
               sc.close();
           }
+          //Excluir Pessoa
           case 3->{
               System.out.println("Qual o id da pessoa a ser excluida?");
               PessoaDao pd = new PessoaDao();
@@ -70,6 +73,7 @@ public class Crud {
               pd.excluirPessoa(p);
               sc.close();
           }
+          //Sair da aplicação
           default -> {
               System.out.println("Saindo.....");
               sc.close();
